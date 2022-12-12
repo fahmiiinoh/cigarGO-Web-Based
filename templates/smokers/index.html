@@ -7,7 +7,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4"style="margin: 25px;">
             {{ with .smokers }}
                 {{ range . }}
-            <div class="col">
+            <div class="col" style="margin: 2px;">
               <div class="card h-200">
                 <div class="card-body">
                   <h5 class="card-title">{{.Name}}</h5>
@@ -17,7 +17,7 @@
                   <small class="text-muted">{{.PatientID}}</small>
                 </div>
               </div>
-                    {{ end }}
+                    {{ end }} 
                 {{ end }}
 </div>
 

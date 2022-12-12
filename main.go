@@ -17,6 +17,7 @@ func main() {
 
 	route.LoadHTMLGlob("templates/**/**")
 
+	//initiate DB connection
 	models.ConnectDB()
 	models.DBMigrate()
 
@@ -31,6 +32,12 @@ func main() {
 	route.GET("/signup", controllers.SignupPage)
 
 	route.POST("/smokers", controllers.SmokersCreate)
+
+	// route.POST("/login", controllers.Login)
+
+	route.POST("/signup", controllers.Signup)
+
+	// route.POST("logout", controllers.Logout)
 
 	route.GET("/", controllers.HomePage)
 
