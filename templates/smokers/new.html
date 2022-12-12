@@ -1,0 +1,34 @@
+{{define "smokers/new.html"}}
+    {{template "layouts/header.html"}}
+
+    <h1 style="margin: 25px;"> Create a New Patient</h1>
+    <form class="row g-3" action="/smokers" method="POST"> 
+        <div class="col-md-3" style="margin: 25px;">
+          <label for="name" class="form-label">Patient Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name="name">
+          <div id="nameHelp" class="form-text"> Name of the Patient Name</div>
+        </div>
+        <div class="col-md-3" style="margin: 25px;">
+          <label for="patientId" class="form-label"> Patient ID number</label>
+          <input type="text" class="form-control" id="patientId" aria-describedby="patientIdHelp" name="patientId">
+          <div id="patientIdHelp" class="form-text"> Patient ID number. etc, A007</div>
+        </div>
+        <div class="col-12" style="margin: 25px;">
+            <label for="healthUpdate" class="form-label"> Health Condition of the patient</label>
+            <input type="textarea" class="form-control" id="healthUpdate" aria-describedby="healthUpdateHelp" name="healthUpdate">
+            <div id="healthUpdateHelp" class="form-text"> Health Condition. etc, worst,normal,healthy</div>
+        </div>
+        <div class="col-12" style="margin: 25px;">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              I hereby that this patient is legitimate
+            </label>
+          </div>
+        </div>
+        <div class="col-12" style="margin: 25px;">
+          <button type="submit" class="btn btn-primary" style="margin: 5px;">Submit</button>
+        </div>
+      </form>
+    {{template "layouts/footer.html"}}
+{{end}}

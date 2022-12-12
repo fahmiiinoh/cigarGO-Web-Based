@@ -23,9 +23,19 @@ func main() {
 
 	route.GET("/smokers", controllers.SmokersIndex)
 
+	route.GET("/smokers/new", controllers.SmokersNew)
+
+	route.GET("/smokers:id", controllers.SmokersShow)
+
+	route.GET("/login", controllers.LoginPage)
+
+	route.GET("/signup", controllers.SignupPage)
+
+	route.POST("/smokers", controllers.SmokersCreate)
+
 	route.GET("/", func(ctx *gin.Context) {
 
-		ctx.HTML(http.StatusOK, "views/index.html", gin.H{
+		ctx.HTML(http.StatusOK, "home/index.html", gin.H{
 
 			"title": "Welcome to Cigarette Monitor System",
 		})
