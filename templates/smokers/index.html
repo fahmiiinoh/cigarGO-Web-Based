@@ -2,20 +2,28 @@
 
 {{ template "layouts/header.html" .}}
 
-<h1> List of All Monitored Smokers</h1>
+<h1 style="margin: 25px;"> List of All Monitored Smokers</h1>
 
-<ul>
-    {{with .smokers}}
-        {{range . }}
-            <li><td>{{.ID}}</td></li>
-            <li><td>{{.Name}}</td></li>
-            <li><td>{{.HealthUpdate}}</td></li>
-            <li><td>{{.CreatedAt}}</td></li>
-            <li><td>{{.UpdatedAt}}</td></li>
-        {{end}}
-    {{end}}
-</ul>
+        <div class="row row-cols-1 row-cols-md-3 g-4"style="margin: 25px;">
+            {{ with .smokers }}
+                {{ range . }}
+            <div class="col">
+              <div class="card h-200">
+                <div class="card-body">
+                  <h5 class="card-title">{{.Name}}</h5>
+                  <p class="card-text">{{.HealthUpdate}}</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">{{.PatientID}}</small>
+                </div>
+              </div>
+                    {{ end }}
+                {{ end }}
+</div>
 
+<p>
+    <a class="btn btn-outline-primary" style="margin: 5px;" href="/smokers/new" role="button">New Patient</a>
+</p>
 {{ template "layouts/footer.html"}}
 
 {{end}}

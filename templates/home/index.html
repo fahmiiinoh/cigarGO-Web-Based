@@ -1,0 +1,15 @@
+{{ define "home/index.html"}}
+
+{{ template "layouts/header.html" .}}
+
+<h1 style="margin: 25px; text-align: center;"> {{.title}}</h1>
+<p>
+    <div class="btn-group" role="group">
+    <a class="btn btn-outline-primary" href="/login" role="button" style="margin: 15px;">Login</a>
+    <a class="btn btn-outline-primary" href="/signup" role="button" style="margin: 15px;">Sign Up</a>
+    </div>
+</p>
+
+{{ template "layouts/footer.html"}}
+
+{{end}}
