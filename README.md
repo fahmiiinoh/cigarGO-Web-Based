@@ -16,4 +16,3 @@ This project is to enhance knowledge and skills more to Go language.
 [![Pull request status graph](https://images.repography.com/31280902/fahmiiinoh/cigargo-GoLang-Gin/recent-activity/FY3WAv1oeP4fziXWOYif6gpahF4_YWYsxF8o_e29-Ss_prs.svg)](https://github.com/fahmiiinoh/cigargo-GoLang-Gin/pulls)
 [![Trending topics](https://images.repography.com/31280902/fahmiiinoh/cigargo-GoLang-Gin/recent-activity/FY3WAv1oeP4fziXWOYif6gpahF4_YWYsxF8o_e29-Ss_words.svg)](https://github.com/fahmiiinoh/cigargo-GoLang-Gin/commits)
 [![Top contributors](https://images.repography.com/31280902/fahmiiinoh/cigargo-GoLang-Gin/recent-activity/FY3WAv1oeP4fziXWOYif6gpahF4_YWYsxF8o_e29-Ss_users.svg)](https://github.com/fahmiiinoh/cigargo-GoLang-Gin/graphs/contributors)
-
