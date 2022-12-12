@@ -1,7 +1,7 @@
 {{define "smokers/new.html"}}
     {{template "layouts/header.html"}}
 
-    <h1 style="margin: 25px;"> Create a New Patient</h1>
+    <!-- <h1 style="margin: 25px;"> Create a New Patient</h1>
     <form class="row g-3" action="/smokers" method="POST"> 
         <div class="col-md-3" style="margin: 25px;">
           <label for="name" class="form-label">Patient Name</label>
@@ -29,6 +29,46 @@
         <div class="col-12" style="margin: 25px;">
           <button type="submit" class="btn btn-primary" style="margin: 5px;">Submit</button>
         </div>
+      </form> -->
+
+      <form action="/smokers" method="POST">
+        <div class="container mt-5">
+          <div class="row d-flex justify-content-center">
+              <div class="col-md-6">
+                  <div class="card px-5 py-5 " id="form1">
+                      <h1 style="margin: 15px; text-align:center;">Create a New Patient</h1>
+                      
+                      <div class="col-md-9" style="margin: 15px;">
+                        <label for="name" class="form-label">Patient Name</label>
+                        <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name="name" placeholder=" Name of the Patient Name">
+                        <div id="nameHelp" class="form-text"></div>
+                      </div>
+                      <div class="col-md-9" style="margin: 15px;">
+                        <label for="patientId" class="form-label"> Patient ID number</label>
+                        <input type="text" class="form-control" id="patientId" aria-describedby="patientIdHelp" name="patientId" placeholder="Patient ID number. etc, A007">
+                        <div id="patientIdHelp" class="form-text"> Patient ID number. etc, A007</div>
+                      </div>
+
+                          <div class="forms-inputs mb-4" style="margin: 15px;">      
+                              <label for="healthUpdate" class="form-label"> Health Condition of the patient</label>
+                              <input type="textarea" class="form-control" id="healthUpdate" aria-describedby="healthUpdateHelp" name="healthUpdate">
+                              <div id="healthUpdateHelp" class="form-text"> Health Condition. etc, worst,normal,healthy</div>
+                          </div>
+                          <div class="forms-inputs mb-4" style="margin: 10px;"> 
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck">
+                              <label class="form-check-label" for="gridCheck">
+                                I hereby that this patient is legitimate.
+                              </label>
+                            </div>
+                          </div>
+                          <div class="mb-3"> 
+                              <button type="submit" class="btn btn-dark w-100">Create</button> </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
       </form>
     {{template "layouts/footer.html"}}
 {{end}}

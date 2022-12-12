@@ -31,3 +31,8 @@ func HomePage(ctx *gin.Context) {
 		"title": "Welcome to Cigarette Monitor System",
 	})
 }
+
+func Signup(ctx *gin.Context) {
+	// email := ctx.PostForm("email")
+
+}
