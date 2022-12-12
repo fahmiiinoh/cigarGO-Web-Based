@@ -4,7 +4,6 @@ import (
 	"cigargo/controllers"
 	"cigargo/models"
 	"log"
-	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
@@ -33,13 +32,9 @@ func main() {
 
 	route.POST("/smokers", controllers.SmokersCreate)
 
-	route.GET("/", func(ctx *gin.Context) {
+	route.GET("/", controllers.HomePage)
 
-		ctx.HTML(http.StatusOK, "home/index.html", gin.H{
-
-			"title": "Welcome to Cigarette Monitor System",
-		})
-	})
 	log.Println("Server has started!")
+
 	route.Run() //default port :8080
 }

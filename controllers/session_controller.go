@@ -23,3 +23,11 @@ func SignupPage(ctx *gin.Context) {
 		gin.H{},
 	)
 }
+
+func HomePage(ctx *gin.Context) {
+
+	ctx.HTML(http.StatusOK, "home/index.html", gin.H{
+
+		"title": "Welcome to Cigarette Monitor System",
+	})
+}
