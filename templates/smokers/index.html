@@ -1,0 +1,21 @@
+{{ define "smokers/index.html"}}
+
+{{ template "layouts/header.html" .}}
+
+<h1> List of All Monitored Smokers</h1>
+
+<ul>
+    {{with .smokers}}
+        {{range . }}
+            <li><td>{{.ID}}</td></li>
+            <li><td>{{.Name}}</td></li>
+            <li><td>{{.HealthUpdate}}</td></li>
+            <li><td>{{.CreatedAt}}</td></li>
+            <li><td>{{.UpdatedAt}}</td></li>
+        {{end}}
+    {{end}}
+</ul>
+
+{{ template "layouts/footer.html"}}
+
+{{end}}
