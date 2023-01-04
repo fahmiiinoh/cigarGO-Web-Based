@@ -1,9 +1,9 @@
-# Cigar-GoLanguage
+# oxiGo
 # This is a leisure project
 
 This project is to enhance knowledge and skills more to Go language.
 
-# Cigar-GO/Gin
+# oxiGo-GO/Gin
 - This project is currently in development.
 - It use mysql database to store the data.
 - Acquire basic CRUD.
